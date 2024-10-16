@@ -29,4 +29,3 @@ The backend is built using Python and likely utilizes a web framework (such as D
 - Book management
 - User authentication
 - Share with other users
-
