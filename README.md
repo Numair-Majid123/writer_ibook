@@ -4,14 +4,14 @@ Writer's iBook is a comprehensive web application for authors to create, manage,
 
 ## Project Structure
 
-- `backend/`: Django backend application
+- `ibook_backend/`: Django backend application
 - `ibook-frontend/`: Angular frontend application
 
 ## Setup
 
 For detailed setup instructions, please refer to the separate README files in the backend and frontend directories:
 
-- [Backend README](backend/README.md)
+- [Backend README](ibook_backend/README.md)
 - [Frontend README](ibook-frontend/README.md)
 
 ## Development
