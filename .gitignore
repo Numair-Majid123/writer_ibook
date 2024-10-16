@@ -1,0 +1,61 @@
+# Django specific files
+*.py[cod]
+__pycache__/
+*.so
+*.log
+*.pot
+*.mo
+*.swp
+*~
+# Ignore the local database
+db.sqlite3
+db.sqlite3-journal
+
+# Ignore Django migrations
+**/migrations/
+
+# Ignore sensitive or environment-specific files
+.env
+*.env
+
+# If you're using virtualenv or pipenv
+.venv/
+env/
+venv/
+pipenv.lock
+Pipfile.lock
+Pipfile
+poetry.lock
+poetry.toml
+
+# Static and media files
+/static/
+/media/
+
+# Ignore Python compiled files
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore coverage files
+.coverage
+htmlcov/
+.coverage.*
+
+# Ignore IDE-specific files
+.idea/
+.vscode/
+
+# Ignore macOS-specific files
+.DS_Store
+
+# Ignore Docker files
+docker-compose.override.yml
+docker-compose.yml
+*.env.db
+*.env.app
+
+# Ignore node_modules if you're using JavaScript for frontend
+node_modules/
+yarn.lock
+package-lock.json

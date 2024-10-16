@@ -1,0 +1,28 @@
+<div class="book-editor">
+  <h2>{{ isNewBook ? 'Create New Book' : 'Edit Book' }}</h2>
+  <form (ngSubmit)="onSave()">
+    <div>
+      <label for="title">Title:</label>
+      <input id="title" [(ngModel)]="book.title" name="title" required>
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" [(ngModel)]="book.description" name="description"></textarea>
+    </div>
+    <div>
+      <label for="content">Content:</label>
+      <quill-editor [(ngModel)]="book.content" name="content" [modules]="quillConfig"></quill-editor>
+    </div>
+    <button type="submit">Save</button>
+  </form>
+</div>
+
+<div *ngIf="selectedWord" class="word-info">
+  <h3>Word Information: {{ selectedWord }}</h3>
+  <div *ngIf="wordInfo; else loading">
+    <p>Definition: {{ wordInfo.definition }}</p>
+    <p>Part of Speech: {{ wordInfo.partOfSpeech }}</p>
+    <p>Example: {{ wordInfo.example }}</p>
+  </div>
+  <ng-template #loading>Loading word information...</ng-template>
+</div>

@@ -1,0 +1,17 @@
+<div class="book-detail" *ngIf="book$ | async as book">
+  <h2>{{ book.title }}</h2>
+  <p class="author">By {{ book.author.username }}</p>
+  <div class="description">
+    <h3>Description</h3>
+    <p>{{ book.description }}</p>
+  </div>
+  <div class="content">
+    <h3>Content</h3>
+    <div [innerHTML]="book.content"></div>
+  </div>
+  <div class="actions">
+    <button (click)="editBook(book.id)">Edit</button>
+    <button (click)="shareBook(book.id)">Share</button>
+    <button (click)="deleteBook(book.id)">Delete</button>
+  </div>
+</div>

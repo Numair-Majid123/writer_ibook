@@ -1,0 +1,19 @@
+<div class="sent-page">
+  <h2>Book Shared Successfully!</h2>
+  <div class="success-message">
+    <p>Your book "{{ bookShare?.book?.title }}" has been shared with {{ bookShare?.name }}.</p>
+    <p>An email has been sent to {{ bookShare?.email }} with the book details.</p>
+  </div>
+  <div class="share-details">
+    <h3>Share Details:</h3>
+    <p><strong>Recipient:</strong> {{ bookShare?.name }}</p>
+    <p><strong>Email:</strong> {{ bookShare?.email }}</p>
+    <p><strong>Address:</strong> {{ bookShare?.address }}</p>
+    <p><strong>City:</strong> {{ bookShare?.city }}</p>
+    <p><strong>Shared on:</strong> {{ bookShare?.shared_at | date:'medium' }}</p>
+  </div>
+  <div class="actions">
+    <button (click)="goToBookList()">Back to My Books</button>
+    <button (click)="shareAnotherBook()">Share Another Book</button>
+  </div>
+</div>
